@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt chỗ thành công</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Đặt chỗ thành công!</h1>
+            <div class="booking-info">
+                <h3>Thông tin đặt chỗ của bạn:</h3>
+                <p><strong>Địa điểm:</strong> <span id="place"></span></p>
+                <p><strong>Số lượng khách:</strong> <span id="guests"></span></p>
+                <p><strong>Ngày đi:</strong> <span id="start-date"></span></p>
+                <p><strong>Ngày về:</strong> <span id="end-date"></span></p>
+            </div>
+            <a href="index.html" class="btn">Quay lại trang chính</a>
+        </div>
+    </div>
+
+    <script>
+        // Lấy thông tin từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const place = urlParams.get('place');
+        const guests = urlParams.get('guests');
+        const startDate = urlParams.get('startDate');
+        const endDate = urlParams.get('endDate');
+
+        // Hiển thị thông tin lên trang
+        document.getElementById('place').textContent = place;
+        document.getElementById('guests').textContent = guests;
+        document.getElementById('start-date').textContent = startDate;
+        document.getElementById('end-date').textContent = endDate;
+    </script>
+
+</body>
+
+</html>
