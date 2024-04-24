@@ -50,7 +50,7 @@
     <!-- Header section ends -->
 
     <!-- Login form container -->
-<!-- 
+    <!-- 
     login -->
     <!-- Home section starts -->
 
@@ -62,7 +62,7 @@
             <a href="#" class="btn">Tìm hiểu thêm</a>
         </div>
 
-        
+
 
         <div class="video-container">
             <video src="images/14385-256955049.mp4" id="video-slider" loop autoplay muted></video>
@@ -79,7 +79,7 @@
         <h1 class="heading">
             <span>Đặt</span>
             <span>Tour</span>
-            
+
         </h1>
 
         <div class="row">
@@ -106,11 +106,34 @@
                     <input type="date">
                 </div>
                 <input type="submit" class="btn" value="Đặt chỗ ngay">
+                <div id="booking-success" class="booking-success">
+                    Bạn đã đặt chỗ thành công!
+                </div>
+
             </form>
 
         </div>
 
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.book form');
+            const successMessage = document.getElementById('booking-success');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                // Show success message
+                successMessage.style.display = 'block';
+
+                // Hide message after 3 seconds
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
+
 
     <!-- Book section ends -->
 
@@ -128,8 +151,9 @@
             <div class="box">
                 <img src="https://sacotravel.com/wp-content/uploads/2023/11/Nui-Ba-Den.jpg" alt="Điểm đến 1">
                 <div class="content">
-                <h3>Du Lịch Tây Ninh : Tây Ninh – Núi Bà Đen – Tòa Thánh Chùa Hang – Tâm An – Đỉnh Vân Sơn</h3>
-                    <p>Tây Ninh là một tỉnh nằm ở miền Tây Nam bộ của Việt Nam, nổi tiếng với các địa điểm tâm linh và cảnh đẹp thiên nhiên. </p>
+                    <h3>Du Lịch Tây Ninh : Tây Ninh – Núi Bà Đen – Tòa Thánh Chùa Hang – Tâm An – Đỉnh Vân Sơn</h3>
+                    <p>Tây Ninh là một tỉnh nằm ở miền Tây Nam bộ của Việt Nam, nổi tiếng với các địa điểm tâm linh và
+                        cảnh đẹp thiên nhiên. </p>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -141,13 +165,14 @@
                     <a href="#" class="btn">Đặt chỗ ngay</a>
                 </div>
                 <div class="box-container">
-                
+
                     <div class="box">
                         <img src="https://vietluxtour.com/Upload/images/2023/TrongNuoc/DaNang/r%E1%BB%ABng%20d%E1%BB%ABa%20b%E1%BA%A3y%20m%E1%BA%ABu.jpg"
                             alt="Điểm đến 3">
                         <div class="content">
                             <h3>Du Lịch Đà Nẵng: Bà Nà - Hội An - Rừng Dừa Bảy Mẫu</h3>
-                            <p>Du lịch Đà Nẵng và các điểm du lịch lân cận như Bà Nà, Hội An và Rừng Dừa Bảy Mẫu là một trải nghiệm tuyệt vời cho du
+                            <p>Du lịch Đà Nẵng và các điểm du lịch lân cận như Bà Nà, Hội An và Rừng Dừa Bảy Mẫu là một
+                                trải nghiệm tuyệt vời cho du
                                 khách muốn khám phá vẻ đẹp và đa dạng văn hóa của miền Trung Việt Nam.</p>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -159,62 +184,72 @@
                             <div class="price"> 1.880.000 <span>2.500.000</span> </div>
                             <a href="#" class="btn">Đặt chỗ ngay</a>
                         </div>
-        <div class="box-container">
-        
-            <div class="box">
-                <img src="https://benthanhtourist.com/uploads/images/da-lat/5c0b3454dcfe8.jpg" alt="Điểm đến 3">
-                <div class="content">
-                    <h3>Du Lịch Đà Lạt: Thác Damb’ri - Nông Trại Cún Puppy Farm - Đồi Chè Cầu Đất - Làng Hoa Vạn Thành</h3>
-                    <p>Du lịch Đà Lạt là cơ hội tuyệt vời để trải nghiệm vẻ đẹp của "thành phố ngàn hoa" và thăm quan những
-                        địa điểm hấp dẫn như Thác Damb’ri, Nông Trại Cún Puppy Farm, Đồi Chè Cầu Đất và Làng Hoa Vạn Thành.</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="price"> 1.880.000 <span>2.500.000</span> </div>
-                    <a href="#" class="btn">Đặt chỗ ngay</a>
-                </div>
-        <div class="box-container">
-        
-            <div class="box">
-                <img src="https://lienbangtravel.com/files/product/du-lich-mien-bac-ha-noi-ha-long-ninh-binh-yen-tu-tour-tron-goi-4-ngay-a47y5epk.jpg"
-                    alt="Điểm đến 3">
-                <div class="content">
-                    <h3>Du Lịch Miền Bắc: Hà Nội - Ninh Bình - Hạ Long - Tuyệt Tình Cốc - Bái Đính - Tràng An - Vinh Hạ Long - Yên Tử</h3>
-                    <p>Du lịch miền Bắc Việt Nam từ Hà Nội, Ninh Bình, Hạ Long đến Tuyệt Tình Cốc, Bái Đính, Tràng An, Vinh Hạ Long và Yên
-                        Tử
-                        mang đến một hành trình đầy ấn tượng với những điểm đến đa dạng về cảnh quan tự nhiên và di sản văn hóa.</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="price"> 1.880.000 <span>2.500.000</span> </div>
-                    <a href="#" class="btn">Đặt chỗ ngay</a>
-                </div>
-                <div class="box-container">
-                
-                    <div class="box">
-                    <img src="https://zoomtravel.vn/upload/product/tour-sapa-dien-bien-moc-chau-5-ngay-4-dem12010.jpg" alt="Điểm đến 3">
-                        <div class="content">
-                            <h3>Du Lịch Hà Nội - Mộc Châu - Điện Biên - Sapa</h3>
-                            <p>Du lịch từ Hà Nội đến Mộc Châu, Điện Biên và Sapa mang đến cho du khách một hành trình đa dạng về văn hóa, cảnh quan
-                                thiên nhiên và trải nghiệm đời sống bản địa của miền núi phía Bắc Việt Nam.</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <div class="price"> 1.880.000 <span>2.500.000</span> </div>
-                            <a href="#" class="btn">Đặt chỗ ngay</a>
-                        </div>
+                        <div class="box-container">
+
+                            <div class="box">
+                                <img src="https://benthanhtourist.com/uploads/images/da-lat/5c0b3454dcfe8.jpg"
+                                    alt="Điểm đến 3">
+                                <div class="content">
+                                    <h3>Du Lịch Đà Lạt: Thác Damb’ri - Nông Trại Cún Puppy Farm - Đồi Chè Cầu Đất - Làng
+                                        Hoa Vạn Thành</h3>
+                                    <p>Du lịch Đà Lạt là cơ hội tuyệt vời để trải nghiệm vẻ đẹp của "thành phố ngàn hoa"
+                                        và thăm quan những
+                                        địa điểm hấp dẫn như Thác Damb’ri, Nông Trại Cún Puppy Farm, Đồi Chè Cầu Đất và
+                                        Làng Hoa Vạn Thành.</p>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="price"> 1.880.000 <span>2.500.000</span> </div>
+                                    <a href="#" class="btn">Đặt chỗ ngay</a>
+                                </div>
+                                <div class="box-container">
+
+                                    <div class="box">
+                                        <img src="https://lienbangtravel.com/files/product/du-lich-mien-bac-ha-noi-ha-long-ninh-binh-yen-tu-tour-tron-goi-4-ngay-a47y5epk.jpg"
+                                            alt="Điểm đến 3">
+                                        <div class="content">
+                                            <h3>Du Lịch Miền Bắc: Hà Nội - Ninh Bình - Hạ Long - Tuyệt Tình Cốc - Bái
+                                                Đính - Tràng An - Vinh Hạ Long - Yên Tử</h3>
+                                            <p>Du lịch miền Bắc Việt Nam từ Hà Nội, Ninh Bình, Hạ Long đến Tuyệt Tình
+                                                Cốc, Bái Đính, Tràng An, Vinh Hạ Long và Yên
+                                                Tử
+                                                mang đến một hành trình đầy ấn tượng với những điểm đến đa dạng về cảnh
+                                                quan tự nhiên và di sản văn hóa.</p>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <div class="price"> 1.880.000 <span>2.500.000</span> </div>
+                                            <a href="#" class="btn">Đặt chỗ ngay</a>
+                                        </div>
+                                        <div class="box-container">
+
+                                            <div class="box">
+                                                <img src="https://zoomtravel.vn/upload/product/tour-sapa-dien-bien-moc-chau-5-ngay-4-dem12010.jpg"
+                                                    alt="Điểm đến 3">
+                                                <div class="content">
+                                                    <h3>Du Lịch Hà Nội - Mộc Châu - Điện Biên - Sapa</h3>
+                                                    <p>Du lịch từ Hà Nội đến Mộc Châu, Điện Biên và Sapa mang đến cho du
+                                                        khách một hành trình đa dạng về văn hóa, cảnh quan
+                                                        thiên nhiên và trải nghiệm đời sống bản địa của miền núi phía
+                                                        Bắc Việt Nam.</p>
+                                                    <div class="stars">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                    <div class="price"> 1.880.000 <span>2.500.000</span> </div>
+                                                    <a href="#" class="btn">Đặt chỗ ngay</a>
+                                                </div>
     </section>
 
     <!-- Packages section ends -->
@@ -263,7 +298,7 @@
 
     <!-- Gallery section starts -->
 
-  
+
     <!-- Gallery section ends -->
 
     <!-- Review section starts -->
@@ -283,8 +318,9 @@
                     <div class="box">
                         <img src="images/Son_Tung_M-TP_1_(2017).png" alt="">
                         <h3>Sơn Tùng M-TP</h3>
-                        <p>VinWonders là một điểm đến giải trí hoàn hảo cho gia đình. Tôi và con cái đã có những giờ phút thư giãn vui vẻ và không
-                        quên được dịch vụ tuyệt vời tại Trung Tâm Bùn Khoáng.</p>
+                        <p>VinWonders là một điểm đến giải trí hoàn hảo cho gia đình. Tôi và con cái đã có những giờ
+                            phút thư giãn vui vẻ và không
+                            quên được dịch vụ tuyệt vời tại Trung Tâm Bùn Khoáng.</p>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -293,15 +329,16 @@
                             <i class="far fa-star"></i>
                         </div>
                         <div class="swiper-container review-slider">
-                        
+
                             <div class="swiper-wrapper">
-                        
+
                                 <div class="swiper-slide">
                                     <div class="box">
                                         <img src="images/Phong-Cach-Thoi-Tran.jpg" alt="">
                                         <h3>Mỹ Tâm</h3>
-                                        <p>Tôi đã có một trải nghiệm thật sự ý nghĩa khi thăm Tòa Thánh Chùa Hang và Tâm An. Không chỉ là những nơi tâm linh, mà
-                                        còn mang lại cho tôi cảm giác bình yên và tĩnh lặng trong lòng.</p>
+                                        <p>Tôi đã có một trải nghiệm thật sự ý nghĩa khi thăm Tòa Thánh Chùa Hang và Tâm
+                                            An. Không chỉ là những nơi tâm linh, mà
+                                            còn mang lại cho tôi cảm giác bình yên và tĩnh lặng trong lòng.</p>
                                         <div class="stars">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -309,15 +346,15 @@
                                             <i class="fas fa-star"></i>
                                             <i class="far fa-star"></i>
                                         </div>
-                                        
-                                        
-                    </div>
-                </div>
-                <!-- Similar translation for other reviews -->
 
-            </div>
 
-        </div>
+                                    </div>
+                                </div>
+                                <!-- Similar translation for other reviews -->
+
+                            </div>
+
+                        </div>
 
     </section>
 
@@ -325,11 +362,11 @@
 
     <!-- Contact section starts -->
 
-    
+
 
     <!-- Custom JS file link -->
     <script src="script.js"></script>
-   
+
 
 
 </body>
