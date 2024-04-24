@@ -687,3 +687,15 @@ header .search-bar-container label:hover{
   }
 
 }
+.booking-success {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}
